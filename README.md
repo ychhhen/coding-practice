@@ -6,4 +6,5 @@
 
 ## Questions from Educative
 
-1. Sliding window - array
+1. sliding-window: Get the average of subarrays with k elements; basic definition of sliding window.
+2. sw-maximum-sum: Given an array of positive numbers and a positive number ‘k’, find the maximum sum of any contiguous subarray of size ‘k’.

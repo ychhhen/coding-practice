@@ -15,26 +15,26 @@ def get_avg_of_subarrays_bf(k, nums):
 # Imp1: sliding window
 def get_avg_of_subarrays_sw(k, nums):
     result = []
-    indexStart, temp = 0, 0
+    indexStart, windowSum = 0, 0
     for indexEnd, num in enumerate(nums):
-        temp += num
-
-        #when reach to the window limit k+1
-        if indexEnd-indexStart > (k-1):
+        windowSum += num
+        #when reach to the window limit k
+        if indexEnd-indexStart >= (k-1):
             #add the average into the result array
-            result.append((temp-num)/k)
+            result.append(windowSum/k)
             #drop the first one, take k element forward
-            temp -= nums[indexStart]
+            windowSum -= nums[indexStart]
             #reset the window's starting index by incrementing 1
             indexStart += 1
-    # append the average of nums[-k:]
-    result.append(temp/k)
+
     return result
 
 
 def main():
-    arr = [1, 3, 2, 6, -1, 4, 1, 8, 2]
-    print(get_avg_of_subarrays_bf(5,arr))
-    print(get_avg_of_subarrays_sw(5,arr))
+    k = 5
+    arrs = [[1, 3, 2, 6, -1, 4, 1, 8, 2],[2,3,3,2]]
+    for arr in arrs:
+        print(get_avg_of_subarrays_bf(k,arr))
+        print(get_avg_of_subarrays_sw(k,arr))
 
 main()
