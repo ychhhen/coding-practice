@@ -47,7 +47,6 @@ def imp_with_dict(k, str1):
 
         windowLen = max(windowLen,indexEnd-indexStart+1)
         
-
     return windowLen
 
 def main():

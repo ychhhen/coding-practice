@@ -21,10 +21,6 @@ def smallest_subarray_sum(target,nums):
 
     return windowLen
 
-def smallest_subarray_sum_2p(target,nums):
-    indexStart, indexEnd = 0, len(nums)-1
-
-
 def main():
     arrs = [[2, 1, 5, 2, 3, 2],[2, 1, 5, 2, 8]]
     target = 7
