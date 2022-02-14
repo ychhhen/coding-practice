@@ -17,9 +17,9 @@ def two_sum_bf(target, nums):
             if num2 == nums[mid]:
                 num2_index = mid
                 break
-            elif nums2 > nums[mid]:
+            elif num2 > nums[mid]:
                 left += 1
-            elif nums2 < nums[mid]:
+            elif num2 < nums[mid]:
                 right -= 1
         
         if num2_index != -1: # Found num2 when num2_index is not -1

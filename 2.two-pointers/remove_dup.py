@@ -2,6 +2,9 @@
 See Leetcode: https://leetcode.com/problems/remove-duplicates-from-sorted-array/submissions/
 '''
 
+
+from typing import List
+
 # My code
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
